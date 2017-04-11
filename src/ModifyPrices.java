@@ -57,6 +57,5 @@ public class ModifyPrices {
         }
 
         System.out.println("Total count " + count);
-
     }
 }
