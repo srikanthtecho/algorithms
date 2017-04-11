@@ -7,16 +7,37 @@ public class MoneyCollection {
 
     public static void main(String args[]) {
 
-        final Scanner scan = new Scanner(System.in);
 
-        final int n = scan.nextInt();
-        final int k = scan.nextInt();
+        // Test 1
+        int money = collectMoney(2, 2);
 
-        collectMoney(n, k);
+        if(money == 3) {
+            System.out.println("TEST PASS");
+        } else {
+            System.out.println("TEST FAIL");
+        }
+
+        // Test 2
+        int money2 = collectMoney(2, 1);
+
+        if(money2 == 2) {
+            System.out.println("TEST PASS");
+        } else {
+            System.out.println("TEST FAIL");
+        }
+
+        // Test 3
+        int money3 = collectMoney(3, 3);
+
+        if(money3 == 5) {
+            System.out.println("TEST PASS");
+        } else {
+            System.out.println("TEST FAIL");
+        }
 
     }
 
-    private static void collectMoney(int n, int k) {
+    private static int collectMoney(int n, int k) {
 
         int count = 0;
 
@@ -33,6 +54,6 @@ public class MoneyCollection {
             }
 
         }
-        System.out.println(count);
+        return count;
     }
 }

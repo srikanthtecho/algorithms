@@ -8,17 +8,14 @@ public class Fleet {
 
     public static void main(String args[]) {
 
-        final Scanner scan = new Scanner(System.in);
-        final int totalWheels = scan.nextInt();
-        final int wheels[] = new int[totalWheels];
+        final int[] wheels = new int[]{6, 3,2};
+        final int[] fleets = chooseFleets(wheels);
 
-        for (int i = 0; i < totalWheels; i++) {
-            wheels[i] = scan.nextInt();
+        if(fleets[0] == 2 && fleets[1] == 0 && fleets[2] == 1 ) {
+            System.out.println("TEST PASS");
+        } else {
+            System.out.println("TEST FAIL");
         }
-
-        String arrayString = Arrays.toString(chooseFleets(wheels));
-
-        System.out.println(arrayString);
     }
 
     private static int[] chooseFleets(int[] wheels) {
@@ -39,9 +36,7 @@ public class Fleet {
                 if (twoFleet * 2 + fourFleet == wheel) {
                     count = count + 1;
                 }
-
             }
-
             fleet[index++] = count;
         }
         return fleet;
