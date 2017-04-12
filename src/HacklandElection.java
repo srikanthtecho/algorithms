@@ -17,7 +17,7 @@ public class HacklandElection {
         } else {
             System.out.println("TEST FAIL");
         }
-    
+
 
     }
 
