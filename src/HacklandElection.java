@@ -11,7 +11,14 @@ public class HacklandElection {
                 "Harry", "Dave", "Michael", "Victor", "Harry", "Alex", "Mary", "Mary"};
 
         final String electionWinner = electionWinner(candidates);
-        System.out.println(electionWinner);
+
+        if (electionWinner.equals("Michael")) {
+            System.out.println("TEST PASS");
+        } else {
+            System.out.println("TEST FAIL");
+        }
+    
+
     }
 
     private static String electionWinner(String[] candidates) {
